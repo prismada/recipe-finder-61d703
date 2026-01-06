@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentScaffold</title>
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23334155'/></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="agentName">AgentScaffold</h1>
+      <p id="agentTagline">Describe your agent, we'll build it</p>
+    </header>
+
+    <form class="search-form" id="form">
+      <textarea id="input" placeholder="Describe the agent you want to create..." required rows="3"></textarea>
+      <button type="submit" id="btn">Create</button>
+    </form>
+
+    <div class="examples" id="examples">
+      <p class="examples-label">Or try an example:</p>
+      <div class="examples-grid">
+        <button class="example-card" data-prompt="Create a flight price finder that searches Google Flights for the cheapest flights between two cities">
+          <span class="example-icon">✈️</span>
+          <span class="example-title">Flight Finder</span>
+          <span class="example-desc">Search for cheap flights</span>
+        </button>
+        <button class="example-card" data-prompt="Create an Amazon price tracker that monitors a product page and reports the current price, rating, and availability">
+          <span class="example-icon">🛒</span>
+          <span class="example-title">Price Tracker</span>
+          <span class="example-desc">Monitor Amazon prices</span>
+        </button>
+        <button class="example-card" data-prompt="Create a news aggregator that scrapes headlines from major news sites like BBC, CNN, and Reuters">
+          <span class="example-icon">📰</span>
+          <span class="example-title">News Aggregator</span>
+          <span class="example-desc">Scrape top headlines</span>
+        </button>
+        <button class="example-card" data-prompt="Create a job search agent that finds software engineering jobs on LinkedIn and Indeed based on keywords and location">
+          <span class="example-icon">💼</span>
+          <span class="example-title">Job Search</span>
+          <span class="example-desc">Find job listings</span>
+        </button>
+        <button class="example-card" data-prompt="Create a recipe finder that searches popular cooking sites for recipes based on ingredients you have">
+          <span class="example-icon">🍳</span>
+          <span class="example-title">Recipe Finder</span>
+          <span class="example-desc">Find recipes by ingredient</span>
+        </button>
+        <button class="example-card" data-prompt="Create a weather dashboard that scrapes current weather and forecasts from weather.com for any city">
+          <span class="example-icon">🌤️</span>
+          <span class="example-title">Weather Dashboard</span>
+          <span class="example-desc">Get weather forecasts</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="status" id="status">
+      <div class="status-dot"></div>
+      <span class="status-text" id="statusText">Creating agent...</span>
+      <span class="status-time" id="statusTime">0:00</span>
+    </div>
+
+    <div class="results" id="results">
+      <div class="results-card">
+        <div class="results-content" id="content"></div>
+      </div>
+      <div class="results-meta">
+        <span id="tokens">0</span> tokens · $<span id="cost">0.00</span> · <span id="duration"></span>
+      </div>
+    </div>
+
+    <div class="error" id="error"></div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
